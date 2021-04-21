@@ -21,7 +21,8 @@ data class ShaadiMatchListEntity(
     @ColumnInfo(name = "picture") @TypeConverters(Converters::class) val picture: PictureEntity? = null,
     @ColumnInfo(name = "dob") @TypeConverters(Converters::class) val dob: DOBEntity? = null,
     @ColumnInfo(name = "registered") @TypeConverters(Converters::class) val registered: DOBEntity? = null,
-    @ColumnInfo(name = "location") @TypeConverters(Converters::class) val location: LocationEntity? = null
+    @ColumnInfo(name = "location") @TypeConverters(Converters::class) val location: LocationEntity? = null,
+    @ColumnInfo(name = "match_state") val matchState: Int = -1,
 ) : Parcelable
 
 
