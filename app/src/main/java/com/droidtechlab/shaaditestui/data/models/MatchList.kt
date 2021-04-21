@@ -11,7 +11,7 @@ data class MatchesList(
     @SerializedName("location") val locationObject: LocationObject? = null,
     @SerializedName("email") val email: String? = null,
     @SerializedName("phone") val phone: String? = null,
-    @SerializedName("email") val cell: String? = null,
+    @SerializedName("cell") val cell: String? = null,
     @SerializedName("login") val loginObject: LoginObject? = null,
     @SerializedName("dob") val dobObject: DOBObject? = null,
     @SerializedName("registered") val registeredObject: RegisteredObject? = null,
