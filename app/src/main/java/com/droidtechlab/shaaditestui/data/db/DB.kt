@@ -9,6 +9,8 @@ import com.droidtechlab.shaaditestui.data.db.entities.converters.Converters
 
 const val DB_VERSION = 1
 const val TABLE_SHAADI_MATCH_ENTITY = "table_shaadi_match_entity"
+const val ID = "_id"
+const val MATCH_STATE = "match_state"
 
 @Database(entities = [ShaadiMatchListEntity::class], version = DB_VERSION)
 @TypeConverters(Converters::class)
