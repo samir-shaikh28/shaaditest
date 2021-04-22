@@ -11,4 +11,4 @@ data class NameEntity(
     @ColumnInfo(name = "title") val title: String? = null,
     @ColumnInfo(name = "first") val first: String? = null,
     @ColumnInfo(name = "last") val last: String? = null
-) : Parcelable
+):  Parcelable

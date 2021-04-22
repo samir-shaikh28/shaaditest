@@ -11,9 +11,10 @@ class LocationEntity(
     @ColumnInfo(name = "city") val city: String? = null,
     @ColumnInfo(name = "state") val state: String? = null,
     @ColumnInfo(name = "country") val country: String? = null,
-    @ColumnInfo(name = "postcode") val postcode: Int = 0,
-    @ColumnInfo(name = "street") @TypeConverters(Converters::class) val street: StreetEntity? = null,
-) : Parcelable
+    @ColumnInfo(name = "postcode") val postcode: String? = null,
+    @ColumnInfo(name = "street") @TypeConverters(Converters::class) val street: StreetEntity? = null
+) :  Parcelable
+
 
 @Parcelize
 class StreetEntity(

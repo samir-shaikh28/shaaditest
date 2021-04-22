@@ -1,6 +1,7 @@
 package com.droidtechlab.shaaditestui.data.repository
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import com.droidtechlab.shaaditestui.data.db.DBHelper
 import com.droidtechlab.shaaditestui.data.db.DBInstance
@@ -22,9 +23,9 @@ class DataSourceRepo(private val context: Context, private val retrofit: Retrofi
         compositeDisposable.add(
             retrofit.create(APIEndPoints::class.java).getMatchingList()
                 .map { response ->
-                    response.results?.forEach { match ->
-                        shaadiDao.insertMatchItem(DBHelper.toMatchListEntity(match))
-                    }
+                        shaadiDao.clearAndInsertMatchList(response.results)
+//                        shaadiDao.clearAndInsertMatchList(DBHelper.toMatchListEntity(match))
+
                     response
                 }
                 .subscribeOn(Schedulers.io())

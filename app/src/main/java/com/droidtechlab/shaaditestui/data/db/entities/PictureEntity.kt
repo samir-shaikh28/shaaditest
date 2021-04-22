@@ -12,4 +12,4 @@ data class PictureEntity(
     @ColumnInfo(name = "large") val large: String? = null,
     @ColumnInfo(name = "medium") val medium: String? = null,
     @ColumnInfo(name = "thumbnail") val thumbnail: String? = null
-) : Parcelable
+) :  Parcelable

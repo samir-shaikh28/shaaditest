@@ -12,7 +12,7 @@ data class LocationObject(
     @SerializedName("city") val city: String? = null,
     @SerializedName("state") val state: String? = null,
     @SerializedName("country") val country: String? = null,
-    @SerializedName("postcode") val postcode: Int = -1
+    @SerializedName("postcode") val postcode: String? = null
 ): Parcelable
 
 
