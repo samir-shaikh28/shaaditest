@@ -156,7 +156,7 @@ class MatchListingFragment : Fragment(), RequestHandlerInterface, View.OnClickLi
                         messageAdapter.notifyDataSetChanged()
                     } else {
                         if (isNetworkAvailable) {
-                            updateUi(false, "Something went wrong")
+                            updateUi(false, "No Data Found!")
                         } else {
                             updateUi(false, "Oops! No Internet Connection!!!")
 
